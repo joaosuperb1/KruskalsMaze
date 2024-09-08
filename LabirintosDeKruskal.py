@@ -69,7 +69,7 @@ def drawRedSquare(screen, x ,y, size):
 def drawBlueSquare(screen, x ,y, size):
     pygame.draw.rect(screen, BLUE, pygame.Rect(x, y, size, size))
 
-def screenWithInicialPosition(screen, x, y, size, color):
+def screenWithInicialPosition(screen, x, y, size):
     screen.fill(BLACK)
     drawRedSquare(screen, x, y, size)
     
@@ -102,6 +102,7 @@ grid = [[NODE() for i in range(width)] for j in range(height)]
 
 edge_list = createEdgeList(width, height)
 
+random.seed(42)
 random.shuffle(edge_list)
 
 clock = pygame.time.Clock()
@@ -139,9 +140,8 @@ while running:
     else:
         
         # Aqui marcaria somente a primeira possição. mas ficou efeito legal colorindo o 
-        # os vertices que estão sendo conectados. e deixando em preto os que não podem
-        # ser conectados.
-        screenWithInicialPosition
+        # os vertices que estão sendo conectados
+        screenWithInicialPosition(screen, xPosition, yPosition, 32)
 
     #check if exists empty set
     flag = True
