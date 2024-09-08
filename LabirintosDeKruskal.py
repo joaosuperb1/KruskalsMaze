@@ -169,7 +169,8 @@ while running:
             yPosition = node_a[Y] * 32
 
         else:
-            drawBlueSquare(screen, edge[0][X] * 32, edge[0][Y] * 32, 32)
+            drawBlueSquare(screen, node_a[X] * 32, node_a[Y] * 32, 32)
+            drawBlueSquare(screen, node_b[X] * 32, node_b[Y] * 32, 32)
 
 
         if grid[node_a[Y]][node_a[X]].set == '0' and grid[node_b[Y]][node_b[X]].set == '0':
